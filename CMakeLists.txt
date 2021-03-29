@@ -21,11 +21,11 @@
 # https://cmake.org/cmake/help/v3.12/module/CMakeDependentOption.html?highlight=cmakedependentoption
 # cmake 3.12 have more better modern c++ support
 
-cmake_minimum_required(VERSION 3.12  FATAL_ERROR)
-project(nana VERSION      1.7.3
+cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
+project(nana VERSION 1.7.4
         DESCRIPTION "C++ GUI library"
         HOMEPAGE_URL http://nanapro.org
-        LANGUAGES CXX         )
+        LANGUAGES CXX)
 
 #######################     Main setting of Nana targets, sources and installs    #####################
 
