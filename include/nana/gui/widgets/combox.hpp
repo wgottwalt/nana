@@ -77,6 +77,9 @@ namespace nana
 			{
 			public:
 				item_proxy(drawer_impl*, std::size_t pos);
+				item_proxy(const item_proxy &rhs) = default;
+				item_proxy(item_proxy &&rhs) = default;
+
 				item_proxy&		text(const ::std::string&);
 
 				::std::string	text() const;

@@ -813,6 +813,8 @@ namespace nana
 			{
 			public:
 				item_proxy(essence*, const index_pair& = index_pair{npos, npos});
+				item_proxy(const item_proxy &rhs) = default;
+				item_proxy(item_proxy &&rhs) = default;
 
 				/// the main purpose of this it to make obvious that item_proxy operate with absolute positions, and don't get moved during sort()
 				static item_proxy from_display(essence *, const index_pair &relative) ;
@@ -1000,6 +1002,8 @@ namespace nana
 				template<typename Value> using cell_translator = typename container_translator<Value>::cell_translator;
 
 				cat_proxy() noexcept = default;
+				cat_proxy(const cat_proxy &rhs) = default;
+				cat_proxy(cat_proxy &&rhs) = default;
 				cat_proxy(essence*, size_type pos) noexcept;
 				cat_proxy(essence*, category_t*) noexcept;
 

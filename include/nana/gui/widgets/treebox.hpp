@@ -177,6 +177,8 @@ namespace nana
 
 				//Undocumented constructor.
 				item_proxy(trigger*, trigger::node_type*);
+				item_proxy(const item_proxy &rhs) = default;
+				item_proxy(item_proxy &&rhs) = default;
 
 				/// Append a child.
 				item_proxy append(const ::std::string& key, ::std::string name);
