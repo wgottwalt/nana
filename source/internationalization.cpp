@@ -127,7 +127,7 @@ namespace nana
 				return token::eof;
 			}
 
-			std::string& get_str()
+			std::string get_str()
 			{
 				return str_;
 			}
