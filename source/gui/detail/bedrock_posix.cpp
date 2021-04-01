@@ -361,12 +361,11 @@ namespace detail
 
 		if(root_runtime)
 		{
-			auto msgwd = root_runtime->window;
-
 			switch(msg.kind)
 			{
 			case nana::detail::msg_packet_tag::pkt_family::mouse_drop:
-				msgwd = brock.wd_manager().find_window(native_window, {msg.u.mouse_drop.x, msg.u.mouse_drop.y});
+			{
+				auto msgwd = brock.wd_manager().find_window(native_window, {msg.u.mouse_drop.x, msg.u.mouse_drop.y});
 
 				if(msgwd)
 				{
@@ -380,6 +379,7 @@ namespace detail
 					brock.wd_manager().do_lazy_refresh(msgwd, false);
 				}
 				break;
+			}
 			default:
 				throw std::runtime_error("Nana.GUI.Bedrock: Undefined message packet");
 			}
