@@ -13,8 +13,9 @@
 #ifndef NANA_GUI_MSGBOX_HPP
 #define NANA_GUI_MSGBOX_HPP
 #include <nana/push_ignore_diagnostic>
-
+#include <functional>
 #include <sstream>
+#include <nana/paint/image.hpp>
 
 namespace nana
 {
